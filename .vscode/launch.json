@@ -5,7 +5,7 @@
 			"name": "project",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceRoot}/bin/project.exe",
+			
 			"preLaunchTask": "build",
 			"args": [],
 			"stopAtEntry": false,
@@ -13,6 +13,7 @@
 			"environment": [],
 			"externalConsole": true,
 			"linux": {
+				"program": "${workspaceRoot}/bin/project",
 				"MIMode": "gdb",
 				"setupCommands": [
 					{
@@ -26,6 +27,7 @@
 				"MIMode": "lldb"
 			},
 			"windows": {
+				"program": "${workspaceRoot}/bin/project.exe",
 				"MIMode": "gdb",
 				"miDebuggerPath": "C:\\Program Files (x86)\\mingw-w64\\i686-7.1.0-posix-dwarf-rt_v5-rev0\\mingw32\\bin\\gdb.exe",
 				"setupCommands": [
@@ -42,13 +44,13 @@
 			"name": "test",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceRoot}/bin/project_TEST.exe",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceRoot}/bin",
 			"environment": [],
 			"externalConsole": true,
 			"linux": {
+				"program": "${workspaceRoot}/bin/project_TEST",
 				"MIMode": "gdb",
 				"setupCommands": [
 					{
@@ -62,6 +64,7 @@
 				"MIMode": "lldb"
 			},
 			"windows": {
+				"program": "${workspaceRoot}/bin/project_TEST.exe",
 				"MIMode": "gdb",
 				"miDebuggerPath": "C:\\Program Files (x86)\\mingw-w64\\i686-7.1.0-posix-dwarf-rt_v5-rev0\\mingw32\\bin\\gdb.exe",
 				"setupCommands": [

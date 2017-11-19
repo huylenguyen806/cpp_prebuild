@@ -11,7 +11,12 @@
 	"tasks": [
 		{
 			"taskName": "build",
-			"command": "mingw32-make",
+			"windows": {
+				"command": "mingw32-make"
+			},
+			"linux": {
+				"command": "make"
+			},
 			"isBuildCommand": true,
 			"problemMatcher": {
 				"owner": "cpp",
@@ -29,7 +34,12 @@
 		},
 		{
 			"taskName": "build_to_file",
-			"command": "mingw32-make",
+			"windows": {
+				"command": "mingw32-make"
+			},
+			"linux": {
+				"command": "make"
+			},
 			"args": [
 				">",
 				"\"Build Log.txt\"",
@@ -38,7 +48,12 @@
 		},
 		{
 			"taskName": "clean",
-			"command": "mingw32-make",
+			"windows": {
+				"command": "mingw32-make"
+			},
+			"linux": {
+				"command": "make"
+			},
 			"args": [
 				"clean"
 			]
@@ -46,98 +61,178 @@
 		{
 			"taskName": "TEST_DEBUG",
 			"command": "cmake",
-			"args": [
-				"..",
-				"-G",
-				"\"MinGW Makefiles\"",
-				"-DCMAKE_BUILD_TYPE=Debug",
-				"-DTEST=ON",
-				"-DUSEBOOST=OFF"
-			]
+			"windows": {
+				"args": [
+					"..",
+					"-G",
+					"\"MinGW Makefiles\"",
+					"-DCMAKE_BUILD_TYPE=Debug",
+					"-DTEST=ON",
+					"-DUSEBOOST=OFF"
+				]
+			},
+			"linux": {
+				"args": [
+					"..",
+					"-DCMAKE_BUILD_TYPE=Debug",
+					"-DTEST=ON",
+					"-DUSEBOOST=OFF"
+				]
+			}
 		},
 		{
 			"taskName": "TEST_RELEASE",
 			"command": "cmake",
-			"args": [
-				"..",
-				"-G",
-				"\"MinGW Makefiles\"",
-				"-DCMAKE_BUILD_TYPE=Release",
-				"-DTEST=ON",
-				"-DUSEBOOST=OFF"
-			]
+			"windows": {
+				"args": [
+					"..",
+					"-G",
+					"\"MinGW Makefiles\"",
+					"-DCMAKE_BUILD_TYPE=Release",
+					"-DTEST=ON",
+					"-DUSEBOOST=OFF"
+				]
+			},
+			"linux": {
+				"args": [
+					"..",
+					"-DCMAKE_BUILD_TYPE=Release",
+					"-DTEST=ON",
+					"-DUSEBOOST=OFF"
+				]
+			}
 		},
 		{
 			"taskName": "NORMAL_DEBUG",
 			"command": "cmake",
-			"args": [
-				"..",
-				"-G",
-				"\"MinGW Makefiles\"",
-				"-DCMAKE_BUILD_TYPE=Debug",
-				"-DTEST=OFF",
-				"-DUSEBOOST=OFF"
-			]
+			"windows": {
+				"args": [
+					"..",
+					"-G",
+					"\"MinGW Makefiles\"",
+					"-DCMAKE_BUILD_TYPE=Debug",
+					"-DTEST=OFF",
+					"-DUSEBOOST=OFF"
+				]
+			},
+			"linux": {
+				"args": [
+					"..",
+					"-DCMAKE_BUILD_TYPE=Debug",
+					"-DTEST=OFF",
+					"-DUSEBOOST=OFF"
+				]
+			}
 		},
 		{
 			"taskName": "NORMAL_RELEASE",
 			"command": "cmake",
-			"args": [
-				"..",
-				"-G",
-				"\"MinGW Makefiles\"",
-				"-DCMAKE_BUILD_TYPE=Release",
-				"-DTEST=OFF",
-				"-DUSEBOOST=OFF"
-			]
+			"windows": {
+				"args": [
+					"..",
+					"-G",
+					"\"MinGW Makefiles\"",
+					"-DCMAKE_BUILD_TYPE=Release",
+					"-DTEST=OFF",
+					"-DUSEBOOST=OFF"
+				]
+			},
+			"linux": {
+				"args": [
+					"..",
+					"-DCMAKE_BUILD_TYPE=Release",
+					"-DTEST=OFF",
+					"-DUSEBOOST=OFF"
+				]
+			}
 		},
 		{
 			"taskName": "TEST_DEBUG_BOOST",
 			"command": "cmake",
-			"args": [
-				"..",
-				"-G",
-				"\"MinGW Makefiles\"",
-				"-DCMAKE_BUILD_TYPE=Debug",
-				"-DTEST=ON",
-				"-DUSEBOOST=ON"
-			]
+			"windows": {
+				"args": [
+					"..",
+					"-G",
+					"\"MinGW Makefiles\"",
+					"-DCMAKE_BUILD_TYPE=Debug",
+					"-DTEST=ON",
+					"-DUSEBOOST=ON"
+				]
+			},
+			"linux": {
+				"args": [
+					"..",
+					"-DCMAKE_BUILD_TYPE=Debug",
+					"-DTEST=ON",
+					"-DUSEBOOST=ON"
+				]
+			}
 		},
 		{
 			"taskName": "TEST_RELEASE_BOOST",
 			"command": "cmake",
-			"args": [
-				"..",
-				"-G",
-				"\"MinGW Makefiles\"",
-				"-DCMAKE_BUILD_TYPE=Release",
-				"-DTEST=ON",
-				"-DUSEBOOST=ON"
-			]
+			"windows": {
+				"args": [
+					"..",
+					"-G",
+					"\"MinGW Makefiles\"",
+					"-DCMAKE_BUILD_TYPE=Release",
+					"-DTEST=ON",
+					"-DUSEBOOST=OFF"
+				]
+			},
+			"linux": {
+				"args": [
+					"..",
+					"-DCMAKE_BUILD_TYPE=Release",
+					"-DTEST=ON",
+					"-DUSEBOOST=OFF"
+				]
+			}
 		},
 		{
 			"taskName": "NORMAL_DEBUG_BOOST",
 			"command": "cmake",
-			"args": [
-				"..",
-				"-G",
-				"\"MinGW Makefiles\"",
-				"-DCMAKE_BUILD_TYPE=Debug",
-				"-DTEST=OFF",
-				"-DUSEBOOST=ON"
-			]
+			"windows": {
+				"args": [
+					"..",
+					"-G",
+					"\"MinGW Makefiles\"",
+					"-DCMAKE_BUILD_TYPE=Debug",
+					"-DTEST=OFF",
+					"-DUSEBOOST=ON"
+				]
+			},
+			"linux": {
+				"args": [
+					"..",
+					"-DCMAKE_BUILD_TYPE=Debug",
+					"-DTEST=OFF",
+					"-DUSEBOOST=ON"
+				]
+			}
 		},
 		{
 			"taskName": "NORMAL_RELEASE_BOOST",
 			"command": "cmake",
-			"args": [
-				"..",
-				"-G",
-				"\"MinGW Makefiles\"",
-				"-DCMAKE_BUILD_TYPE=Release",
-				"-DTEST=OFF",
-				"-DUSEBOOST=ON"
-			]
+			"windows": {
+				"args": [
+					"..",
+					"-G",
+					"\"MinGW Makefiles\"",
+					"-DCMAKE_BUILD_TYPE=Release",
+					"-DTEST=OFF",
+					"-DUSEBOOST=ON"
+				]
+			},
+			"linux": {
+				"args": [
+					"..",
+					"-DCMAKE_BUILD_TYPE=Release",
+					"-DTEST=OFF",
+					"-DUSEBOOST=ON"
+				]
+			}
 		}
 	]
 }
