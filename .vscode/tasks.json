@@ -1,0 +1,143 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "0.1.0",
+	"isShellCommand": true,
+	"options": {
+		"cwd": "${workspaceRoot}/build"
+	},
+	"showOutput": "always",
+	"echoCommand": false,
+	"tasks": [
+		{
+			"taskName": "build",
+			"command": "mingw32-make",
+			"isBuildCommand": true,
+			"problemMatcher": {
+				"owner": "cpp",
+				"fileLocation": "absolute",
+				"pattern": {
+					"regexp": "(.*.cpp):(\\d+):(\\d+):\\s+(error|warning):\\s+(.*)",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5,
+					"loop": true
+				}
+			}
+		},
+		{
+			"taskName": "build_to_file",
+			"command": "mingw32-make",
+			"args": [
+				">",
+				"\"Build Log.txt\"",
+				"2>&1"
+			]
+		},
+		{
+			"taskName": "clean",
+			"command": "mingw32-make",
+			"args": [
+				"clean"
+			]
+		},
+		{
+			"taskName": "TEST_DEBUG",
+			"command": "cmake",
+			"args": [
+				"..",
+				"-G",
+				"\"MinGW Makefiles\"",
+				"-DCMAKE_BUILD_TYPE=Debug",
+				"-DTEST=ON",
+				"-DUSEBOOST=OFF"
+			]
+		},
+		{
+			"taskName": "TEST_RELEASE",
+			"command": "cmake",
+			"args": [
+				"..",
+				"-G",
+				"\"MinGW Makefiles\"",
+				"-DCMAKE_BUILD_TYPE=Release",
+				"-DTEST=ON",
+				"-DUSEBOOST=OFF"
+			]
+		},
+		{
+			"taskName": "NORMAL_DEBUG",
+			"command": "cmake",
+			"args": [
+				"..",
+				"-G",
+				"\"MinGW Makefiles\"",
+				"-DCMAKE_BUILD_TYPE=Debug",
+				"-DTEST=OFF",
+				"-DUSEBOOST=OFF"
+			]
+		},
+		{
+			"taskName": "NORMAL_RELEASE",
+			"command": "cmake",
+			"args": [
+				"..",
+				"-G",
+				"\"MinGW Makefiles\"",
+				"-DCMAKE_BUILD_TYPE=Release",
+				"-DTEST=OFF",
+				"-DUSEBOOST=OFF"
+			]
+		},
+		{
+			"taskName": "TEST_DEBUG_BOOST",
+			"command": "cmake",
+			"args": [
+				"..",
+				"-G",
+				"\"MinGW Makefiles\"",
+				"-DCMAKE_BUILD_TYPE=Debug",
+				"-DTEST=ON",
+				"-DUSEBOOST=ON"
+			]
+		},
+		{
+			"taskName": "TEST_RELEASE_BOOST",
+			"command": "cmake",
+			"args": [
+				"..",
+				"-G",
+				"\"MinGW Makefiles\"",
+				"-DCMAKE_BUILD_TYPE=Release",
+				"-DTEST=ON",
+				"-DUSEBOOST=ON"
+			]
+		},
+		{
+			"taskName": "NORMAL_DEBUG_BOOST",
+			"command": "cmake",
+			"args": [
+				"..",
+				"-G",
+				"\"MinGW Makefiles\"",
+				"-DCMAKE_BUILD_TYPE=Debug",
+				"-DTEST=OFF",
+				"-DUSEBOOST=ON"
+			]
+		},
+		{
+			"taskName": "NORMAL_RELEASE_BOOST",
+			"command": "cmake",
+			"args": [
+				"..",
+				"-G",
+				"\"MinGW Makefiles\"",
+				"-DCMAKE_BUILD_TYPE=Release",
+				"-DTEST=OFF",
+				"-DUSEBOOST=ON"
+			]
+		}
+	]
+}

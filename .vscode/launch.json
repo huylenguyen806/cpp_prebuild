@@ -1,0 +1,143 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "project",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceRoot}/bin/project.exe",
+			"preLaunchTask": "build",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceRoot}/bin",
+			"environment": [],
+			"externalConsole": true,
+			"linux": {
+				"MIMode": "gdb",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+			},
+			"osx": {
+				"MIMode": "lldb"
+			},
+			"windows": {
+				"MIMode": "gdb",
+				"miDebuggerPath": "C:\\Program Files (x86)\\mingw-w64\\i686-7.1.0-posix-dwarf-rt_v5-rev0\\mingw32\\bin\\gdb.exe",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+				//"coreDumpPath": "${workspaceRoot}/bin/coreDump/crash.dmp"
+			}
+		},
+		{
+			"name": "test",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceRoot}/bin/project_TEST.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceRoot}/bin",
+			"environment": [],
+			"externalConsole": true,
+			"linux": {
+				"MIMode": "gdb",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+			},
+			"osx": {
+				"MIMode": "lldb"
+			},
+			"windows": {
+				"MIMode": "gdb",
+				"miDebuggerPath": "C:\\Program Files (x86)\\mingw-w64\\i686-7.1.0-posix-dwarf-rt_v5-rev0\\mingw32\\bin\\gdb.exe",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+			}
+		},
+		{
+			"name": "SPIKE",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceRoot}/spike/bin/spike.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceRoot}/spike/bin",
+			"environment": [],
+			"externalConsole": true,
+			"linux": {
+				"MIMode": "gdb",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+			},
+			"osx": {
+				"MIMode": "lldb"
+			},
+			"windows": {
+				"MIMode": "gdb",
+				"miDebuggerPath": "C:\\Program Files (x86)\\mingw-w64\\i686-7.1.0-posix-dwarf-rt_v5-rev0\\mingw32\\bin\\gdb.exe",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+			}
+		},
+		{
+			"name": "C++ Attach",
+			"type": "cppdbg",
+			"request": "attach",
+			"program": "enter program name, for example ${workspaceRoot}/a.out",
+			"processId": "${command:pickProcess}",
+			"linux": {
+				"MIMode": "gdb",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+			},
+			"osx": {
+				"MIMode": "lldb"
+			},
+			"windows": {
+				"MIMode": "gdb",
+				"miDebuggerPath": "C:\\Program Files (x86)\\mingw-w64\\i686-7.1.0-posix-dwarf-rt_v5-rev0\\mingw32\\bin\\gdb.exe",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+			}
+		}
+	]
+}

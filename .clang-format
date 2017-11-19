@@ -1,0 +1,77 @@
+#https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+#Require Clang 4.0
+
+#BasedOnStyle: LLVM
+ContinuationIndentWidth: 3
+IndentWidth: 6
+MaxEmptyLinesToKeep: 2
+#TabWidth: 4
+UseTab: Never
+
+ColumnLimit: 80
+
+AlignAfterOpenBracket: AlwaysBreak
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+#AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments: true
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AlwaysBreakAfterReturnType: None
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+AlwaysBreakTemplateDeclarations: true
+
+
+
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBraces: Custom
+BraceWrapping: {
+	AfterClass: false,
+	AfterStruct: true,
+	AfterControlStatement: false,
+	AfterEnum: true,
+	BeforeElse: true,
+	AfterFunction: false,
+	AfterNamespace: true,
+}
+BreakBeforeBinaryOperators: None
+#BreakBeforeInheritanceComma: false
+BreakBeforeTernaryOperators: true
+
+#BreakConstructorInitializers: AfterColon
+#CompactNamespaces: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+
+
+Cpp11BracedListStyle: true
+#FixNamespaceComments: true
+IndentCaseLabels: true
+
+IndentWrappedFunctionNames: true
+KeepEmptyLinesAtTheStartOfBlocks: true
+
+NamespaceIndentation: Inner
+PointerAlignment: Left
+ReflowComments: true
+SortIncludes: false
+#SortUsingDeclarations: true
+SpaceAfterCStyleCast: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 4
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInContainerLiterals: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+Standard: Cpp11
+
+

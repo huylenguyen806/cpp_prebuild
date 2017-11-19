@@ -1,0 +1,19 @@
+# list of folders not to be included in
+/spike
+/build
+/bin
+
+# list of files not to be included in
+*.o
+*.exe
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# files auto fix of vscode
+.vscode/.cmaketools.json
+
+
+# exception
+!cppcheck.log

@@ -1,0 +1,8 @@
+/mnt/d/Dropbox/programming/C++/project/googletest/googletest/linux/CMakeFiles/install/strip.dir
+/mnt/d/Dropbox/programming/C++/project/googletest/googletest/linux/CMakeFiles/install/local.dir
+/mnt/d/Dropbox/programming/C++/project/googletest/googletest/linux/CMakeFiles/install.dir
+/mnt/d/Dropbox/programming/C++/project/googletest/googletest/linux/CMakeFiles/list_install_components.dir
+/mnt/d/Dropbox/programming/C++/project/googletest/googletest/linux/CMakeFiles/gtest_main.dir
+/mnt/d/Dropbox/programming/C++/project/googletest/googletest/linux/CMakeFiles/edit_cache.dir
+/mnt/d/Dropbox/programming/C++/project/googletest/googletest/linux/CMakeFiles/gtest.dir
+/mnt/d/Dropbox/programming/C++/project/googletest/googletest/linux/CMakeFiles/rebuild_cache.dir
